@@ -34,7 +34,7 @@ const CarCard = ({ car }: CarCardProps) => {
       </p>
 
       <div className='relative w-full h-40 my-3 object-contain'>
-        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain' />
+        <Image src={generateCarImageUrl(car)} alt='car model' fill className='object-contain' />
       </div>
 
       <div className='relative flex w-full mt-2'>
@@ -42,6 +42,7 @@ const CarCard = ({ car }: CarCardProps) => {
           <div className='flex flex-col justify-center items-center gap-2'>
             <Image src='/steering-wheel.svg' width={20} height={20} alt='steering wheel' />
             <p className='text-[14px] leading-[17px]'>
+              {transmission.toLowerCase() === "a" ? "Automatic" : "Manual"}
             </p>
           </div>
           <div className="car-card__icon">
@@ -60,14 +61,14 @@ const CarCard = ({ car }: CarCardProps) => {
             containerStyles='w-full py-[16px] rounded-full bg-primary-blue'
             textStyles='text-white text-[14px] leading-[17px] font-bold'
             rightIcon='/right-arrow.svg'
-            handleClick={() => setIsOpen(true)}
+            handleClick={() => setIsOpen(false)}
           />
         </div>
       </div>
 
       <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
     </div>
-  );
-};
+  )
+}
 
 export default CarCard;

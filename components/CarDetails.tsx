@@ -13,7 +13,8 @@ interface CarDetailsProps {
     car: CarProps;
 }
 
-const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
+const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
+    return (
     <>
         <Transition appear show={isOpen} as={Fragment}>
             <Dialog as='div' className='relative z-10' onClose={closeModal}>
@@ -26,7 +27,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                     leaveFrom='opacity-100'
                     leaveTo='opacity-0'
                 >
-                    <div className='fixed inset-0 bg-black bg-opacity-25' />
+                    <div className='fixed inset-0 z-50 bg-black bg-opacity-25' />
                 </Transition.Child>
 
                 <div className='fixed inset-0 overflow-y-auto'>
@@ -98,6 +99,6 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
             </Dialog>
         </Transition>
     </>
-);
-
+    );
+}
 export default CarDetails;
