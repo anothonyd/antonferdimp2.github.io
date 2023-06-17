@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10">
                 <div className="flex flex-col justify-start items-start gap-6">
                     <Image src="/logo.svg" alt="logo" width={118} height={18} className="object-contain" />
-                    <p className="text-base text-gray-700">Car Rental 2023.
+                    <p className="text-base text-gray-700 invisible md:visible">Car Rental 2023.
                         <br />All Rights Reserved &copy;
                     </p>
                 </div>
@@ -34,8 +34,8 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10">
-                <p>@2023 Car Rental. All Rights Reserved</p>
+            <div className="flex justify-center items-center flex-col mt-10 border-t border-gray-100 sm:flex-row sm:justify-between sm:items-center sm:flex-wrap sm:px-16 px-6 py-10">
+                <p className="mb-4 sm:mb-0">@2023 Car Rental. All Rights Reserved</p>
 
                 <div className="footer__copyrights-link">
                     <Link href="/" className="text-gray-500">Privacy & Policy</Link>

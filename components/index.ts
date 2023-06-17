@@ -6,10 +6,12 @@ import NavBar from "./Navbar";
 import ShowMore from "./ShowMore";
 import SearchBar from "./Searchbar";
 import Hero from "./Hero";
+import CarDetails from "./CarDetails";
 
 export {
   Hero,
   CarCard,
+  CarDetails,
   CustomButton,
   CustomFilter,
   Footer,

@@ -17,12 +17,24 @@ const Navbar = () => {
                     />
                 </Link>
 
-                <CustomButton 
-                title="Sign In"
-                btnType="button"
-                containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
-                />
+                <div className="navbar__link">
+                    <CustomButton
+                        title="About Us"
+                        btnType="button"
+                        containerStyles="text-black-900 invisible md:visible min-w-[130px]"
+                    />
 
+                    <CustomButton
+                        title="Contact Us"
+                        btnType="button"
+                        containerStyles="text-black-900 invisible md:visible min-w-[130px]"
+                    />
+                    <CustomButton
+                        title="Sign In"
+                        btnType="button"
+                        containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
+                    />
+                </div>
             </nav>
         </header>
     )

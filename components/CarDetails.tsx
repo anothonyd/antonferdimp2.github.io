@@ -13,8 +13,7 @@ interface CarDetailsProps {
     car: CarProps;
 }
 
-const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
-    return (
+const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
     <>
         <Transition appear show={isOpen} as={Fragment}>
             <Dialog as='div' className='relative z-10' onClose={closeModal}>
@@ -27,7 +26,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     leaveFrom='opacity-100'
                     leaveTo='opacity-0'
                 >
-                    <div className='fixed inset-0 z-50 bg-black bg-opacity-25' />
+                    <div className='fixed inset-0 bg-black bg-opacity-25' />
                 </Transition.Child>
 
                 <div className='fixed inset-0 overflow-y-auto'>
@@ -58,18 +57,18 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
 
                                 <div className='flex-1 flex flex-col gap-3'>
                                     <div className='relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg'>
-                                        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain' />
+                                        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain mt-3' />
                                     </div>
 
                                     <div className='flex gap-3'>
                                         <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
-                                            <Image src={generateCarImageUrl(car, "29")} alt='car model' fill priority className='object-contain' />
+                                            <Image src={generateCarImageUrl(car, "29")} alt='car model' fill priority className='object-contain mt-2' />
                                         </div>
                                         <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
-                                            <Image src={generateCarImageUrl(car, "33")} alt='car model' fill priority className='object-contain' />
+                                            <Image src={generateCarImageUrl(car, "33")} alt='car model' fill priority className='object-contain mt-5' />
                                         </div>
                                         <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
-                                            <Image src={generateCarImageUrl(car, "13")} alt='car model' fill priority className='object-contain' />
+                                            <Image src={generateCarImageUrl(car, "13")} alt='car model' fill priority className='object-contain mt-2' />
                                         </div>
                                     </div>
                                 </div>
@@ -99,6 +98,6 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
             </Dialog>
         </Transition>
     </>
-    );
-}
+);
+
 export default CarDetails;
